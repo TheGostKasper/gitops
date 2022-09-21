@@ -97,4 +97,3 @@ spec:
       valuesFiles:
       - ./charts/weave-policy-agent/values.yaml
       interval: 1m
- 
