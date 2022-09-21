@@ -87,7 +87,7 @@ spec:
       enabled: true
       sourceName: flux-system
       path: ./policies
-      url: https://github.com/waleedhammam/gitops/tree/main/policies
+      url: https://github.com/weaveworks/policy-library
   chart:
     spec:
       chart: ./charts/weave-policy-agent
