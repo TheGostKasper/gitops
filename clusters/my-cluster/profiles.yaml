@@ -85,7 +85,7 @@ spec:
               fileName: admission.json
     policySource:
       enabled: true
-      sourceName: flux-system
+      sourceName: policy-system
       path: ./policies
   chart:
     spec:
@@ -94,7 +94,6 @@ spec:
         kind: GitRepository
         name: policy-agent
         namespace: policy-system
-        path: ./policies
       valuesFiles:
       - ./charts/weave-policy-agent/values.yaml
       interval: 1m
