@@ -85,7 +85,7 @@ spec:
               fileName: admission.json
     policySource:
       enabled: true
-      sourceName: policy-system
+      sourceName: flux-system
       path: ./policies
   chart:
     spec:
