@@ -86,6 +86,7 @@ spec:
     policySource:
       enabled: true
       sourceName: flux-system
+      path: ./policies
       url: https://github.com/weaveworks/policy-library
   chart:
     spec:
