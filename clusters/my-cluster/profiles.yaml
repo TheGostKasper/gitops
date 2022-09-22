@@ -85,9 +85,8 @@ spec:
               fileName: admission.json
     policySource:
       enabled: true
-      sourceName: flux-system
       path: ./policies
-      url: git@github.com/weaveworks/policy-library
+      url: git@github.com/weaveworks/policy-library.git
       tag: v1.0.0
       secretRef: ssh-credentials
   chart:
