@@ -87,7 +87,7 @@ spec:
       enabled: true
       sourceName: flux-system
       path: ./policies
-      url: ssh://git@github.com/weaveworks/policy-library
+      url: git@github.com/weaveworks/policy-library
       tag: v1.0.0
       secretRef: ssh-credentials
   chart:
