@@ -85,7 +85,7 @@ spec:
               fileName: admission.json
     policySource:
       enabled: true
-      path: ./policies
+      path: ./
       url: ssh://git@github.com/weaveworks/policy-library
       tag: v1.0.0
       secretRef: ssh-credentials
