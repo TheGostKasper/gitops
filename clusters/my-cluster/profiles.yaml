@@ -86,8 +86,7 @@ spec:
     policySource:
       enabled: true
       path: ./policies
-      url: ssh://git@github.com/weaveworks/policy-library
-      tag: v1.0.0
+      url: https://github.com/waleedhammam/gitops
       secretRef: ssh-credentials
   chart:
     spec:
