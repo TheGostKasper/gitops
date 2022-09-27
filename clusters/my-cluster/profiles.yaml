@@ -57,7 +57,7 @@ spec:
   interval: 1m
   url: ssh://git@github.com/weaveworks/policy-agent
   ref:
-    branch: terraform
+    branch: dev
   secretRef:
     name: ssh-credentials
 
