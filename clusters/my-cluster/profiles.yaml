@@ -51,7 +51,7 @@ spec:
   interval: 1m
   url: https://github.com/weaveworks/profiles-catalog
   ref:
-    branch: 1507-gitsources
+    branch: main
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
