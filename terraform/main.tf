@@ -1,13 +1,23 @@
+
+
 terraform {
   required_version = ">= 0.12.26"
 }
 
-variable "subject" {
-   type = string
-   default = "World"
-   description = "Subject to hello"
+resource "kubernetes_service_account" "example" {
+  metadata {
+    name = "my-service-account"
+  }
+
+  automount_service_account_token = true
+  
+  secret {
+    name = "${kubernetes_secret.example.metadata.0.name}"
+  }
 }
 
-output "hello_world" {
-  value = "Hello, ${var.subject}!"
+resource "kubernetes_secret" "example" {
+  metadata {
+    name = "my-secret"
+  }
 }

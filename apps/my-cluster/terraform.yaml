@@ -1,0 +1,20 @@
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: helloworld
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./terraform
+  approvePlan: auto
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  webhooks:
+  - stage: post-planning
+    url: https://policy-agent.flux-system.svc/terraform/admission
+    enabled: true
+    payloadType: "SpecAndPlan"
+    testExpression: "{{ .passed }}"
+    errorMessageTemplate: "Message: {{ (index .violations 0).message }}"

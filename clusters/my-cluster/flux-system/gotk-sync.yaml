@@ -8,10 +8,10 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: terraform
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/waleedhammam/gitops
+  url: ssh://git@github.com/ahsayde/gitops
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
