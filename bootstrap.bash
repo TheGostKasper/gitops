@@ -9,7 +9,7 @@ kind load docker-image ghcr.io/fluxcd/kustomize-controller:v0.29.0 --name my-clu
 kind load docker-image ghcr.io/fluxcd/notification-controller:v0.27.0 --name my-cluster
 kind load docker-image ghcr.io/fluxcd/source-controller:v0.30.0 --name my-cluster
 kind load docker-image quay.io/jetstack/cert-manager-controller:v1.6.0 --name my-cluster
-kind load docker-image ghcr.io/external-secrets/external-secrets:v0.3.9 --name my-cluster
+kind load docker-image ghcr.io/external-secrets/external-secrets:v0.6.1 --name my-cluster
 
 # create secret for external-secrets operator for pulling from AWS secret manager and create ClusterResourceSet for deploying the secret to workload clusters
 
