@@ -49,11 +49,10 @@ metadata:
   namespace: policy-system
 spec:
   interval: 1m
-  url: https://github.com/weaveworks/policy-agent
+  url: ssh://git@github.com/weaveworks/policy-agent
   ref:
     branch: mutation-policies
-  secretRef: 
-    name: ssh-credentials
+  secretRef: ssh-credentials
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
