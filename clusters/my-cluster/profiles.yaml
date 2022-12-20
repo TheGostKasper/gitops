@@ -68,29 +68,22 @@ spec:
     namespace: flux-system
   interval: 1m
   values:
-    policy-agent:
-      config:
-        accountId: my-account
-        clusterId: my-cluster
-        audit:
-          enabled: true
-          sinks:
-            filesystemSink:
-              fileName: audit.json
-        admission:
-          enabled: true
-          mutate: true
-          sinks:
-            k8sEventsSink:
-              enabled: true
-            filesystemSink:
-              fileName: admission.json
-    policySource:
-      enabled: true
-      path: ./
-      url: ssh://git@github.com/weaveworks/policy-library
-      tag: v1.0.0
-      secretRef: ssh-credentials
+    config:
+      accountId: my-account
+      clusterId: my-cluster
+      audit:
+        enabled: true
+        sinks:
+          filesystemSink:
+            fileName: audit.json
+      admission:
+        enabled: true
+        mutate: true
+        sinks:
+          k8sEventsSink:
+            enabled: true
+          filesystemSink:
+            fileName: admission.json
   chart:
     spec:
       chart: ./helm
