@@ -78,7 +78,7 @@ spec:
             fileName: audit.json
       admission:
         enabled: true
-        mutate: true
+        mutate: false
         sinks:
           k8sEventsSink:
             enabled: true
