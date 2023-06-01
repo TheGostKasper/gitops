@@ -51,7 +51,7 @@ spec:
   interval: 1m
   url: ssh://git@github.com/weaveworks/policy-agent
   ref:
-    branch: open-source-policy-agent
+    branch: master
   secretRef: 
     name: ssh-credentials
 ---
